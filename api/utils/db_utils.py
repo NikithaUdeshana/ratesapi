@@ -1,4 +1,5 @@
 import psycopg2
+import logging
 from utils.constants import QUERY_PRICES_SQL
 
 class Database:
@@ -20,7 +21,7 @@ class Database:
             )
             return conn
         except Exception as e:
-            print("Unable to connect to the database: %s" % e)
+            logging.error("Unable to connect to the database: %s" % e)
             return None
 
     def fetch_rates(self, date_from, date_to, origin, destination):
@@ -33,7 +34,7 @@ class Database:
                     if rows:
                         return rows
                     else:
-                        print("Unable to retrieve prices from the database.")
+                        logging.error("Unable to retrieve prices from the database.")
                         return None
                 finally:
                     conn.close()
