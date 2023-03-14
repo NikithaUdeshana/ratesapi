@@ -4,7 +4,7 @@ Rates API is used to retrieve average rates for each day on a route between port
 
 ## Setup
 
-First, use pip install to install the requirements of the API
+First, use pip3 to install the requirements of the API
 
 ```bash
 pip install -r requirements.txt
