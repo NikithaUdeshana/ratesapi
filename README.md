@@ -4,12 +4,21 @@ Rates API is used to retrieve average rates for each day on a route between port
 
 ## Setup
 
-First, use pip install to install the requirements of the API
+First, use pip3 to install the requirements of the API
 
 ```bash
 pip install -r requirements.txt
 ```
-Please follow the instruction given in the [setup description](https://github.com/xeneta/ratestask/tree/trunk#initial-setup) to setup the database.
+Please follow the instruction given in the [setup description](https://github.com/xeneta/ratestask/tree/trunk#initial-setup) to setup the database. Create a .env file in the root folder(ratesapi/) and provide the database password as given below.
+
+```bash
+DATABASE_PASSWORD = 'provide_database_password_here'
+```
+Run the ratesapi by executing the following command from the root folder.
+
+```bash
+python3 api/app.py
+```
 
 ## Details
 
